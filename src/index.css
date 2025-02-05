@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+:root {
+  --color-primary: #2563eb;       /* Primary blue */
+  --color-primary-light: #eff6ff;  /* Lighter variant for hover/background */
+  --color-secondary: #ffffff;      /* Modern white */
+}
