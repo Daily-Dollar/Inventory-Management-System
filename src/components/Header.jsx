@@ -2,7 +2,7 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 const Header = () => {
   return (
-    <header className="bg-white shadow-sm px-6 py-3 flex items-center justify-between border-l-0">
+    <header className="bg-white px-6 py-3 flex items-center justify-between border-l-0">
       {/* Left side: Search box */}
       <div className="flex items-center space-x-4">
         <div className="relative flex-1 max-w-xl">

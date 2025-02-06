@@ -1,54 +1,52 @@
-
-// Example stock products images
-const stockProducts = [
-  "https://via.placeholder.com/50?text=Cap",
-  "https://via.placeholder.com/50?text=T-Shirt",
-  "https://via.placeholder.com/50?text=Hat",
-  "https://via.placeholder.com/50?text=Watch",
-  "https://via.placeholder.com/50?text=Jacket",
-];
+import { 
+  ShoppingCartIcon, 
+  BanknotesIcon, 
+  ArchiveBoxIcon, 
+  CurrencyDollarIcon 
+} from "@heroicons/react/24/outline";
 
 const Overview = () => {
-  return (
-    <div className="space-y-4">
-      <div>
-        <h3 className="font-bold text-lg mb-2">Overview</h3>
-        <div className="flex justify-between">
-          <div>
-            <p className="text-sm text-gray-500">Total Products</p>
-            <p className="text-xl font-bold">1240</p>
-          </div>
-          <div>
-            <p className="text-sm text-gray-500">Total Stock</p>
-            <p className="text-xl font-bold">325</p>
-          </div>
-        </div>
-        <div className="flex justify-between mt-2">
-          <div>
-            <p className="text-sm text-gray-500">Total Revenue</p>
-            <p className="text-xl font-bold">$12,400</p>
-          </div>
-          <div>
-            <p className="text-sm text-gray-500">Total Profit</p>
-            <p className="text-xl font-bold">$2,300</p>
-          </div>
-        </div>
-      </div>
+  // Data for the cards; update the values as needed.
+  const cardData = [
+    {
+      title: "Total Sales",
+      amount: "GHS 12,400",
+      icon: <ShoppingCartIcon className="text-[var(--color-primary)]/80 h-12 w-12" />,
+    },
+    {
+      title: "Total Purchases",
+      amount: "GHS 9,800",
+      icon: <BanknotesIcon className="text-[var(--color-primary)]/80 h-12 w-12" />,
+    },
+    {
+      title: "Total Products",
+      amount: "1240",
+      icon: <ArchiveBoxIcon className="text-[var(--color-primary)]/80 h-12 w-12" />,
+    },
+    {
+      title: "Total Profit",
+      amount: "GHS 2,300",
+      icon: <CurrencyDollarIcon className="text-[var(--color-primary)]/80 h-12 w-12" />,
+    },
+  ];
 
-      <div>
-        <h4 className="font-semibold mb-2">Stock Products</h4>
-        <div className="flex flex-wrap gap-2">
-          {stockProducts.map((src, index) => (
-            <img
-              key={index}
-              src={src}
-              alt={`Product ${index}`}
-              className="h-12 w-12 rounded border"
-            />
-          ))}
+  return (
+    <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pb-4">
+      {cardData.map((card, index) => (
+        <div
+          key={index}
+          className="bg-white rounded-sm p-6 transition-all duration-300"
+        >
+          <div className="flex items-center space-x-4">
+            <div>{card.icon}</div>
+            <div>
+              <h3 className="text-sm text-gray-500">{card.title}</h3>
+              <p className="text-2xl font-bold text-gray-800">{card.amount}</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      ))}
+    </section>
   );
 };
 

@@ -45,7 +45,7 @@ const Sidebar = () => {
   }, [location.pathname]);
   
   return (
-    <div className="w-64 md:w-64 bg-white flex flex-col transition-all duration-300 relative">
+    <div className="w-64 md:w-64 bg-white flex flex-col transition-all duration-300 relative font-semibold">
       <div className="p-4 text-3xl font-bold text-gray-800 border-gray-200">
         <span className="text-[var(--color-primary)]">Sales</span>Hub
       </div>

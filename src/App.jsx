@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DashboardLayout from "./layouts/DashboardLayout";
-import Inventory from "./pages/Inventory";
 import Orders from "./pages/Orders";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
     <BrowserRouter>
       <DashboardLayout>
         <Routes>
-          <Route path="/" element={<Inventory />} />
+          <Route path="/" element={<Dashboard/>} />
           <Route path="/orders" element={<Orders />} />
           {/* Add more routes as needed */}
         </Routes>
